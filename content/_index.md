@@ -1,26 +1,36 @@
 ---
-title: 🪴 Studentbox documentation
+title: 👨‍💻 Studentbox documentation
 enableToc: false
 ---
-Host your second brain and [digital garden](https://jzhao.xyz/posts/networked-thought) for free. Quartz features
 
-1. Extremely fast natural-language [[notes/search]]
-2. Customizable and hackable design based on [Hugo](https://gohugo.io/)
-3. Automatically generated backlinks, link previews, and local graph
-4. Built-in [[notes/CJK + Latex Support (测试) | CJK + Latex Support]] and [[notes/callouts | Admonition-style callouts]]
-5. Support for both Markdown Links and Wikilinks
+_Studentbox_ is a project that aims to make deployment easy for student 👨‍🎓, and management of hosted projects simple for a teacher 👨‍🏫.
 
-Check out some of the [amazing gardens that community members](notes/showcase.md) have published with Quartz or read about [why I made Quartz](notes/philosophy.md) to begin with.
+# 🌍 Context
 
-## Get Started
-> 📚 Step 1: [Setup your own digital garden using Quartz](notes/setup.md)
+I've realised this project during my BSc (Hons)[^bsc] at [Dundalk Institute of Technology](https://www.dkit.ie/). The curriculum is about _Cloud Computing_, and so this project has to take advantage of different cloud aspects like including scaling, APIs[^api] and automation etc.
 
-Returning user? Figure out how to [[notes/updating|update]] your existing Quartz garden.
+See the [[about-me|About me]] page this know more about the author.
 
-If you prefer browsing the contents of this site through a list instead of a graph, you see a list of all [setup-related notes](/tags/setup).
+# 🥜 In a nutshell...
 
-### Troubleshooting
-- 🚧 [Troubleshooting and FAQ](notes/troubleshooting.md)
-- 🐛 [Submit an Issue](https://github.com/jackyzha0/quartz/issues)
-- 👀 [Discord Community](https://discord.gg/cRFFHYye7t)
+_Studentbox_ wants to archive the following goals:
+- Host the students' projects in an isolated environment, without impacting other projects or host system
+- Provide a complete environment for the apps supported
+- Be able to deploy in a single command line...
+	- PHP app using MySQL
+	- Node.js app using MongoDB or MySQL
+- The _CLI_[^cli] client should...
+	- work on Linux, Mac and Windows
+	- be easy to setup
+	- be usable by both student and teacher
+- Make possible live-reloading while developing
 
+While having the following constraints:
+- Hostable on AWS
+- Self-hostable on an on-premise server
+
+[^bsc]: **B**achelor of **Sc**ience (**Hon**our**s**) is the 4th year after secondary school (in Ireland).
+	In France, the equivalent year is the 1st year of Master's degree (the 4th year after _Lycée_).
+[^api]: **A**pplication **P**rogramming **I**nterface in IT is an abstraction layer to interact with things we don't want to deal manually with. In this curriculum, we're talking about Web APIs (REST with JSON among others).
+[^cli]: Command Line Interface, as the opposit of Graphical User Interface (GUI) is a text-based interface.
+	On Windows, it's in CMD/PowerShell. On Linux, it's in your favourite terminal & shell (bash, zsh...) 
