@@ -9,18 +9,16 @@ enableCallouts: true
 enableSPA: true
 enableFooter: true
 enableContextualBacklinks: true
-enableRecentNotes: false
+enableRecentNotes: true
 enableGitHubEdit: true
-GitHubLink: https://github.com/jackyzha0/quartz/tree/hugo/content
+GitHubLink: https://github.com/sinux-l5d/studentbox-doc/tree/main/content
 enableSemanticSearch: false
 operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
 description:
-  Host your second brain and digital garden for free. Quartz features extremely fast full-text search,
-  Wikilink support, backlinks, local graph, tags, and link previews.
+  This is the documentation for my 4th year project in Dundalk Institute of Technologies (Dkit) in Ireland,
+  part of my curriculum in Université Savoie Mont-Blanc (USMB) thanks to the Erasmus+ programme.
 page_title:
-  "🪴 Quartz 3.3"
+  "🪴 Studentbox documentation"
 links:
-  - link_name: Twitter
-    link: https://twitter.com/_jzhao
   - link_name: Github
-    link: https://github.com/jackyzha0
+    link: https://github.com/sinux-l5d
