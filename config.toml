@@ -1,6 +1,5 @@
-baseURL = "https://quartz.jzhao.xyz/"
-languageCode = "en-us"
-googleAnalytics = "G-XYFD95KB4J"
+baseURL = "https://simon-l5d.github.io/studentbox-doc"
+languageCode = "en-uk"
 relativeURLs = false
 disablePathToLower = true
 ignoreFiles = [
