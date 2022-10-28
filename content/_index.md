@@ -32,5 +32,5 @@ While having the following constraints:
 [^bsc]: **B**achelor of **Sc**ience (**Hon**our**s**) is the 4th year after secondary school (in Ireland).
 	In France, the equivalent year is the 1st year of Master's degree (the 4th year after _Lycée_).
 [^api]: **A**pplication **P**rogramming **I**nterface in IT is an abstraction layer to interact with things we don't want to deal manually with. In this curriculum, we're talking about Web APIs (REST with JSON among others).
-[^cli]: Command Line Interface, as the opposit of Graphical User Interface (GUI) is a text-based interface.
+[^cli]: **C**ommand **L**ine **I**nterface, as the opposit of Graphical User Interface (GUI) is a text-based interface.
 	On Windows, it's in CMD/PowerShell. On Linux, it's in your favourite terminal & shell (bash, zsh...) 
