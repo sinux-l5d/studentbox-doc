@@ -1,5 +1,5 @@
 ---
-title: "Goals"
+title: "Goals 🎯"
 draft: false
 tags: 
 - project

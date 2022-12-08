@@ -22,15 +22,6 @@ Compare API types, knowing I want to transfer files, and need live-capabilities.
 
 ### gRPC & Protobuf
 
-## Storage
-
-The app will 2 different types of data: metadata (users, permissions) and the projects themselves (files).
-
-### Users, permissions
-
-### Projects
-
-
 ## Sand-boxing processes 
 
 It's important that each project is isolated from others and eventually from the host. I need a lightweight system that allow to easily add/remove new project, limiting disk/CPU/memory usage.
@@ -52,5 +43,25 @@ See implementations and API
 #### Self-managed
 
 #### AWS-managed
+
+## Storage
+
+The app will 2 different types of data: metadata (users, permissions) and the projects themselves (files).
+
+### Users, permissions, projects...
+
+### Projects
+
+## Logic
+
+### Defining permissions
+
+### Recipe for minimal deploy
+
+All student in mind, write down the simplest way for a user to deploy his php/node.js app.
+
+# Choosing tech stack
+
+Once research is done, make choices.
 
 # Realising
