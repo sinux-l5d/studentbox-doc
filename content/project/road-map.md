@@ -60,7 +60,7 @@ The app will 2 different types of data: metadata (users, permissions) and the pr
 
 All student in mind, write down the simplest way for a user to deploy his php/node.js app.
 
-# Choosing tech stack
+# Choosing tech stack (by 16th of January)
 
 Once research is done, make choices.
 
