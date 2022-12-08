@@ -1,6 +1,6 @@
 ---
 title: "Goals"
-draft: true
+draft: false
 tags: 
 - project
 ---
