@@ -1,17 +1,18 @@
 ---
-title: "Road map"
+title: "Road map 🗺️"
 draft: false
 tags:
 - project
-aliases: []
+aliases:
+- Road map
 ---
 
 
-# Research 
+# Research 🔎
 
 This section treats about everything that needs to be researched before starting to code.
 
-## API
+## API 
 
 Compare API types, knowing I want to transfer files, and need live-capabilities.
 

@@ -5,8 +5,6 @@ tags:
 - project
 ---
 
-Here I cover everything I _would like_ to see in the final project. The steps to archives sub-goals is described in the [[road-map|road map]].
-
 # Back end
 
 The back end should be either hosted on AWS or an on-premise server.
