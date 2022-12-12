@@ -49,6 +49,7 @@ See implementations and API
 ## Storage
 
 The app will 2 different types of data: metadata (users, permissions) and the projects themselves (files).
+What type of database? Why?
 
 ### Users, permissions, projects...
 
