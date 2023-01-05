@@ -18,9 +18,13 @@ Compare API types, knowing I want to transfer files, and need live-capabilities.
 
 ### REST & JSON
 
+See [[research/api/json|JSON]].
+
 ### GraphQL & JSON
 
 ### gRPC & Protobuf
+
+See [[research/api/protobuf|Protobuf]].
 
 ## Sand-boxing processes 
 
