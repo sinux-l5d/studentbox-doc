@@ -1,4 +1,6 @@
 /project/goals/index.{html} /project/goals/
 /project/road-map/index.{html} /project/road-map/
+/research/api/json/index.{html} /research/api/json/
+/research/api/protobuf/index.{html} /research/api/protobuf/
 /index.html /
 /about-me/index.{html} /about-me/
