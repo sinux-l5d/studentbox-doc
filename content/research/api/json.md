@@ -55,7 +55,7 @@ This time, let's say I have a array of users:
 			"surname": "Thomas",
 			"age": 22,
 			"hobbies": [],
-			allies: [
+			"allies": [
 				"12345"
 			]
 		}
@@ -64,3 +64,9 @@ This time, let's say I have a array of users:
 ```
 
 We can see that JSON as at least one drawback: the document's structure and the data are mixed. You can see above that we repeat the keys `id`, `name`, `surname`... for multiple users.
+
+> [!question] Is it possible to transfer a file over JSON?
+>
+> Although protocols like REST and gRPC are more suitable for the task (with multipart upload and stream respectively), one could upload a file by encoding it in base64. Note that it increase the data size by ~33%[^33-percent]
+
+[^33-percent]: https://stackoverflow.com/questions/4083702/posting-a-file-and-associated-data-to-a-restful-webservice-preferably-as-json
