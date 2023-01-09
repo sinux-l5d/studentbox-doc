@@ -18,7 +18,7 @@ Compare API types, knowing I want to transfer files, and need live-capabilities.
 
 ### REST & JSON
 
-See [[research/api/json|JSON]].
+See [[research/api/json|JSON]] and [[research/api/rest|REST]].
 
 ### GraphQL & JSON
 
