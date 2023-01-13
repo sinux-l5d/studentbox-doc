@@ -5,12 +5,11 @@ tags: []
 aliases: []
 ---
 
-The official website present it as:
-
-> [!quote]
+> [!quote] From the official website
 >
 > **JSON** (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.
-> <small>*JSON introduction. (n.d.). JSON. Retrieved December 14th, 2022, from https://www.json.org/json-en.html*</small>
+> 
+> <small>_Introducing json_ (no date) _JSON_. Available at: https://www.json.org/json-en.html (Accessed: January 13, 2023).</small>
 
 It's a serialisation format that is human-friendly, meaning object, arrays and values are represented in a string. Example:
 
