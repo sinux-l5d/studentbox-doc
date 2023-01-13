@@ -16,11 +16,20 @@ This section treats about everything that needs to be researched before starting
 
 Compare API types, knowing I want to transfer files, and need live-capabilities.
 
-### REST & JSON
+### JSON
 
-See [[research/api/json|JSON]] and [[research/api/rest|REST]].
+See [[research/api/json|JSON]]
 
-### GraphQL & JSON
+<!-- ![JSON](research/api/json) -->
+
+### REST 
+
+See [[research/api/rest|REST]].
+
+
+### GraphQL
+
+See [[research/api/graphql|GraphQL]].
 
 ### gRPC & Protobuf
 
