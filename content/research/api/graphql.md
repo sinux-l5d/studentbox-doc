@@ -45,9 +45,17 @@ For GraphQL, just as for [[research/api/grpc|gRPC]], we need to write specificat
 > }
 > ```
 
-Those type definition being in separate files, it's easy to document the API automatically with tools like [GraphiQL](https://github.com/graphql/graphiql).
+Those type definition being in separate files, it's easy to document the API automatically with tools like [Graph*i*QL](https://github.com/graphql/graphiql).
 
 One of the advantages of this query approach is its precision, allowing to have all the data we need at once, without the need to fetch multiple times like it's the case for REST.
+
+> [!danger] Drawbacks
+>
+> From https://research.aimultiple.com/graphql-vs-rest/
+> 1. GraphQL's single endpoint (`/graphql`) can be a bottleneck, especially because REST allow easy caching on routes.
+> 2. Security is not built in the standard, different alternatives exists.
+> 3. "While GraphQL offers a caching mechanism, the cache-implementing process is much more complex and time-consuming than REST implementation." It's mostly because REST allows caching by using different URLs.
+> 4. GraphQL cost more because queries can be unpredictably large, and a query's cost can be hard to estimate. 
 
 ## File upload
 
