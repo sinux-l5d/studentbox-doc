@@ -18,3 +18,11 @@ Let's say we have a database of recipe. We want to list them, add, modify and de
 - `POST /recipes` to add one
 - `PUT /recipes/:id` or `PATCH /recipes/:id` to modify a recipe fully or partially (where id is a unique identifier of the resource)
 - `DELETE /recipes/:id` to delete it
+
+## File upload
+
+For uploading file, we have several options. One is to use base64 encoding and put the result in JSON, but it's not the best option for large file. Although we might never have big files (because we exchange coding files), it is something to consider for assets for example.
+
+Another way of doing is through a `multipart/form-data` request[^multipart]. The principle is to first upload the files independently from there metadata or any data you could send. Either first upload the files, get IDs and link them to the metadata (server controls names/ids) or upload metadata first and then files (client controls names/ids).
+
+[^multipart]: libik and kirk (2020) _REST API - file (ie images) processing - best practices_, _Stack Overflow_. Available at: https://stackoverflow.com/questions/33279153/rest-api-file-ie-images-processing-best-practices (Accessed: January 13, 2023).
