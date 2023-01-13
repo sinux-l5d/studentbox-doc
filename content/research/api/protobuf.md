@@ -5,16 +5,16 @@ tags: []
 aliases: []
 ---
 
-[Protobuf](https://developers.google.com/protocol-buffers) is a serialisation format that needs type definition beforehand. It's created by Google. This allow to omit structure from the data serialised, as client and server know what it is about.
+[Protobuf or Protocol Buffers](https://developers.google.com/protocol-buffers) is a binary serialisation format that needs type definition beforehand. It's created by Google. This allow to omit structure from the data serialised, as client and server know what it is about.
 
 > [!quote]
 >
 > Protocol buffers are a language-neutral, platform-neutral extensible mechanism for serializing structured data.
-> <small>*Protocol Buffers. (n.d.). Google. Retrieved January 5th, 2023, from https://developers.google.com/protocol-buffers*</small>
+> <small>_Protocol buffers | google developers_ (no date) _Google_. Google. Available at: https://developers.google.com/protocol-buffers (Accessed: January 13, 2023).</small>
 
-To demonstrate how it's working, I've recreated the same structure as in the [[research/api/json|Json]] page.
+To demonstrate how it's working, I've recreated the same structure as in the [[research/api/json|JSON]] page.
 
-A *type* in protobuf is called a `message`. Messages are defined in a `.proto` file. Let's create a list of people, and see how it's serialised compared to Json.
+A *type* in protobuf is called a `message`. Messages are defined in a `.proto` file. Let's create a list of people, and see how it's serialised compared to JSON.
 
 ```protobuf
 syntax = "proto3";
@@ -36,7 +36,7 @@ message PersonList {
 
 Before going further, each property has a identifier (the numbers). They are used in serialisation.
 
-I made a little experiment in JavaScript using [protobufjs](https://www.npmjs.com/package/protobufjs) to compare the length of messages in Json and Protobuf:
+I made a little experiment in JavaScript using [protobufjs](https://www.npmjs.com/package/protobufjs) to compare the length of messages in JSON (string) and Protobuf (binary):
 
 ```js
 const protobuf = require("protobufjs");
@@ -79,6 +79,10 @@ console.log("json-serialized=" + JSON.stringify(users).length)
 ```
 
 The score for proto is 93 bytes, and 207 for JSON.
+
+> [!info] Info
+>
+> When a protobufjs object like Person or Personlist gets serialized as JSON, like the last line in the script above, then it use the javascript equivalent, so the result is not biased.
 
 With a few more line, we can infer what the proto-serialised message look like:
 ```js
