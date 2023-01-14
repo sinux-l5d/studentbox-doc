@@ -33,7 +33,7 @@ See [[research/api/graphql|GraphQL]].
 
 ### gRPC & Protobuf
 
-See [[research/api/protobuf|Protobuf]].
+See [[research/api/protobuf|Protobuf]] and [[research/api/grpc|gRPC]].
 
 ## Sand-boxing processes 
 
