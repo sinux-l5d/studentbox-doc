@@ -1,5 +1,5 @@
 ---
-title: "grpc"
+title: "gRPC"
 draft: true
 tags: []
 aliases: []

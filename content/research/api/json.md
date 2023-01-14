@@ -1,5 +1,5 @@
 ---
-title: "json"
+title: "JSON"
 draft: false
 tags: []
 aliases: []

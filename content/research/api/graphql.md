@@ -1,5 +1,5 @@
 ---
-title: "graphql"
+title: "GraphQL"
 draft: false
 tags: []
 aliases:

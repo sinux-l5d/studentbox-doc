@@ -1,5 +1,5 @@
 ---
-title: "Protobuf"
+title: "Protocol Buffers"
 draft: false
 tags: []
 aliases: []
