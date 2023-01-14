@@ -50,7 +50,7 @@ A few advantages of gRPC:
 
 From the dedicated file, it creates a gRPC server to receive requests from clients, that themselves use a dynamic library generated via `protoc` and a dedicated plugin.
 
-![Architecture of gRPC](grpc-architecture.svg)
+![Architecture of gRPC](research/api/grpc-architecture.svg)
 
 This diagram illustrate how different clients/servers written in different languages can work together with the gRPC server and *stubs* (a client) created.
 
