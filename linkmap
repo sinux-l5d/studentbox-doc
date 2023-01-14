@@ -1,9 +1,9 @@
-/about-me/index.{html} /about-me/
-/research/api/graphql/index.{html} /research/api/graphql/
-/research/api/json/index.{html} /research/api/json/
-/research/api/rest/index.{html} /research/api/rest/
 /index.html /
-/project/goals/index.{html} /project/goals/
 /project/road-map/index.{html} /project/road-map/
 /research/api/grpc/index.{html} /research/api/grpc/
 /research/api/protobuf/index.{html} /research/api/protobuf/
+/research/api/rest/index.{html} /research/api/rest/
+/about-me/index.{html} /about-me/
+/project/goals/index.{html} /project/goals/
+/research/api/graphql/index.{html} /research/api/graphql/
+/research/api/json/index.{html} /research/api/json/
