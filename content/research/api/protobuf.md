@@ -2,7 +2,9 @@
 title: "Protocol Buffers"
 draft: false
 tags: []
-aliases: []
+aliases:
+- Protobuf
+- Protocol Buffers
 ---
 
 [Protobuf or Protocol Buffers](https://developers.google.com/protocol-buffers) is a binary serialisation format that needs type definition beforehand. It's created by Google. This allow to omit structure from the data serialised, as client and server know what it is about.

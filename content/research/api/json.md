@@ -2,7 +2,9 @@
 title: "JSON"
 draft: false
 tags: []
-aliases: []
+aliases:
+- json
+- JSON
 ---
 
 > [!quote] From the official website

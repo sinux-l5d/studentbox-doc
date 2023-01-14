@@ -4,6 +4,7 @@ draft: false
 tags: []
 aliases:
 - GraphQL
+- graphql
 ---
 
 > [!quote] According to the official website
