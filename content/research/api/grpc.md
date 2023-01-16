@@ -18,7 +18,7 @@ gRPC uses [[research/api/protobuf|Protocol Buffers]] as a serialisation format b
 
 We need to define the messages (basic Protobuf structure) that will be exchanged whenever it's a argument or a return value, along with the `services`, that describe the procedures available.
 
-> [!example] Example from tutorial
+> [!example] Example from official tutorial[^grpcio]
 >
 > First the messages:
 > ```protobuf

@@ -9,9 +9,9 @@ Project Title: APIs for file transfer, a study case of REST, GraphQL and gRPC.
 
 ## Background
 
-The researches done in this paper help me understand 3 types of APIs and how to achieve file transfer.
+The research done in this paper helped me understand 3 types of APIs and how to achieve file transfer.
 
-This paper has been written with [Obsidian](https://obsidian.md) and his meant to be published has a website, available at https://sinux-l5d.github.io/studentbox-doc.
+This paper has been written with [Obsidian](https://obsidian.md) and is meant to be published as a website, available at https://sinux-l5d.github.io/studentbox-doc.
 
 ## Literature review
 
@@ -23,7 +23,7 @@ This paper has been written with [Obsidian](https://obsidian.md) and his meant t
 > 
 > <small>_Introducing json_ (no date) _JSON_. Available at: https://www.json.org/json-en.html (Accessed: January 13, 2023).</small>
 
-It's a serialisation format that is human-friendly, meaning object, arrays and values are represented in a string. Example:
+It's a serialisation format that is human-friendly, meaning objects, arrays and values are represented in a string. Example:
 
 ```json
 {
@@ -74,7 +74,7 @@ This time, let's say I have a array of users:
 }
 ```
 
-We can see that JSON as at least one drawback: the document's structure and the data are mixed. You can see above that we repeat the keys `id`, `name`, `surname`... for multiple users.
+We can see that JSON has at least one drawback: the document's structure and the data are mixed. You can see above that we repeat the keys `id`, `name`, `surname`... for multiple users.
 
 > [!question] Is it possible to transfer a file over JSON?
 >
@@ -89,7 +89,7 @@ REST (*Representational state transfer*) is a style of software architecture tha
 - The body for the actual data, when needed, nowadays mostly [[research/api/json|JSON]] for APIs
 - The return status tells quickly if everything happened as expected
 
-Let's say we have a database of recipe. We want to list them, add, modify and delete them. This can be done with a meaningful base path like `/recipes`. An API following REST principles would have those couples verbs/paths:
+Let's say we have a database of recipes. We want to list them, add, modify and delete them. This can be done with a meaningful base path like `/recipes`. An API following REST principles would have those couples verbs/paths:
 - `GET /recipes` to have a list of them (complete or partial objects, maybe with pagination) 
 - `POST /recipes` to add one
 - `PUT /recipes/:id` or `PATCH /recipes/:id` to modify a recipe fully or partially (where id is a unique identifier of the resource)
@@ -97,9 +97,9 @@ Let's say we have a database of recipe. We want to list them, add, modify and de
 
 #### File upload
 
-For uploading file, we have several options. One is to use base64 encoding and put the result in JSON, but it's not the best option for large file. Although we might never have big files (because we exchange coding files), it is something to consider for assets for example.
+For uploading files, we have several options. One is to use base64 encoding and put the result in JSON, but it's not the best option for large files. Although we might never have big files (because we exchange coding files), it is something to consider for assets for example.
 
-Another way of doing is through a `multipart/form-data` request[^multipart]. The principle is to first upload the files independently from there metadata or any data you could send. Either first upload the files, get IDs and link them to the metadata (server controls names/ids) or upload metadata first and then files (client controls names/ids).
+Another way of doing this is through a `multipart/form-data` request[^multipart]. The principle is to first upload the files independently from their metadata or any data you could send. Either first upload the files, get IDs and link them to the metadata (server controls names/ids) or upload metadata first and then files (client controls names/ids).
 
 ### GraphQL
 
@@ -109,7 +109,7 @@ Another way of doing is through a `multipart/form-data` request[^multipart]. The
 >
 > <small>_GraphQL | A query language for you API_ (no date) _GraphQL_. Available at: https://graphql.org/ (Accessed: January 13, 2023).</small>
 
-First thing we notice is that GraphQL is not just a API specification but a full runtime[^aimuliple] unlike [[research/api/rest|REST]] which is just a specification.
+First thing we notice is that GraphQL is not just a API specifications but a full runtime[^aimuliple] unlike [[research/api/rest|REST]] which is just a specification.
 
 For GraphQL, just as for [[research/api/grpc|gRPC]], we need to write specification of the objects we will transfer beforehand. In the GraphQL word, it's called *type definitions* and types contains *fields*.
 
@@ -144,19 +144,19 @@ For GraphQL, just as for [[research/api/grpc|gRPC]], we need to write specificat
 
 Those type definition being in separate files, it's easy to document the API automatically with tools like [Graph*i*QL](https://github.com/graphql/graphiql).
 
-One of the advantages of this query approach is its precision, allowing to have all the data we need at once, without the need to fetch multiple times like it's the case for REST.
+One of the advantages of this query approach is its precision, allowing us to have all the data we need at once, without the need to fetch multiple times like it's the case for REST.
 
 > [!danger] Drawbacks
 >
 > From https://research.aimultiple.com/graphql-vs-rest/
-> 1. GraphQL's single endpoint (`/graphql`) can be a bottleneck, especially because REST allow easy caching on routes.
-> 2. Security is not built in the standard, different alternatives exists.
+> 1. GraphQL's single endpoint (`/graphql`) can be a bottleneck, especially because REST allows easy caching on routes.
+> 2. Security is not built in the standard, different alternatives exist.
 > 3. "While GraphQL offers a caching mechanism, the cache-implementing process is much more complex and time-consuming than REST implementation." It's mostly because REST allows caching by using different URLs.
-> 4. GraphQL cost more because queries can be unpredictably large, and a query's cost can be hard to estimate. 
+> 4. GraphQL costs more because queries can be unpredictably large, and a query's cost can be hard to estimate. 
 
 #### File upload
 
-Just like for REST, we could encode files in base64 to upload them. But that adds overhead for both server and client, increase the file size by ~33%[^wundergraph].
+Just like for REST, we could encode files in base64 to upload them. But that adds overhead for both server and client, increasing the file size by ~33%[^wundergraph].
 
 Just like for REST, we could use a multipart request but:
 
@@ -164,17 +164,17 @@ Just like for REST, we could use a multipart request but:
 >
 >  Unfortunately, there's no standard to handle Multipart Requests with GraphQL. This means, your solution will not be easily portable across different languages or implementations and your client implementation depends on the exact implementation of the server.
 
-So one of the other approach is to have another homemade API in REST that takes care of files only, or using AWS S3. The last option is not viable if we want to keep our system independent from cloud.
+So one of the other approaches is to have another homemade API in REST that takes care of files only, or using AWS S3. The last option is not viable if we want to keep our system independent from the cloud.
 
-The article I relied on is made by Jens Neuse at [WunderGraph](https://wundergraph.com), described as "The simplicity of RPC withthe power of GraphQL" on there website. That could be a solution, but would lock us in a not-so-well-known solution, and we don't control the prices. If I where to use RPC, I would probably go with [[research/api/grpc|gRPC]] which is free, opensource and licensed Apache-2.0.
+The article I relied on is made by Jens Neuse at [WunderGraph](https://wundergraph.com), described as "The simplicity of RPC with the power of GraphQL" on their website. That could be a solution, but would lock us in a not-so-well-known solution, and we don't control the prices. If I were to use RPC, I would probably go with [[research/api/grpc|gRPC]] which is free, open source and licensed Apache-2.0.
 
 ### Protocol Buffers
 
-[Protobuf or Protocol Buffers](https://developers.google.com/protocol-buffers) is a binary serialisation format that needs type definition beforehand. It's created by Google. This allow to omit structure from the data serialised, as client and server know what it is about.
+[Protobuf or Protocol Buffers](https://developers.google.com/protocol-buffers) is a binary serialisation format that needs type definition beforehand. It's created by Google. This allows to omit structure from the data serialised, as client and server know what it is about.
 
 > [!quote]
 >
-> Protocol buffers are a language-neutral, platform-neutral extensible mechanism for serializing structured data.
+> Protocol buffers are a language-neutral, platform-neutral extensible mechanism for serialising structured data.
 > <small>_Protocol buffers | google developers_ (no date) _Google_. Google. Available at: https://developers.google.com/protocol-buffers (Accessed: January 13, 2023).</small>
 
 To demonstrate how it's working, I've recreated the same structure as in the [[research/api/json|JSON]] page.
@@ -199,7 +199,7 @@ message PersonList {
 }
 ```
 
-Before going further, each property has a identifier (the numbers). They are used in serialisation.
+Before going further, each property has an identifier (the numbers). They are used in serialisation.
 
 I made a little experiment in JavaScript using [protobufjs](https://www.npmjs.com/package/protobufjs) to compare the length of messages in JSON (string) and Protobuf (binary):
 
@@ -247,7 +247,7 @@ The score for proto is 93 bytes, and 207 for JSON.
 
 > [!info] Info
 >
-> When a protobufjs object like Person or Personlist gets serialized as JSON, like the last line in the script above, then it use the javascript equivalent, so the result is not biased.
+> When a protobufjs object like Person or Personlist gets serialised as JSON, like the last line in the script above, then it uses the JavaScript equivalent, so the result is not biased.
 
 With a few more line, we can infer what the proto-serialised message look like:
 ```js
@@ -263,7 +263,7 @@ console.log(dataUser.toString())
 ### gRPC
 
 gRPC is "a high performance, open source universal RPC framework"[^grpcio].
-RPC stands for *Remote Procedure Call*, which is a kind of API that abstract the complexity of making calls to a remote API by providing to the developer functions that works like if it was local[^wikipedia].
+RPC stands for *Remote Procedure Call*, which is a kind of API that abstracts the complexity of making calls to a remote API by providing to the developer functions that works like if it was local[^wikipedia].
 
 > [!quote] Quote
 > 
@@ -271,9 +271,9 @@ RPC stands for *Remote Procedure Call*, which is a kind of API that abstract the
 
 gRPC uses [[research/api/protobuf|Protocol Buffers]] as a serialisation format by default, but can use [[research/api/json|JSON]]. It works by extending the syntax of a `.proto` file.
 
-We need to define the messages (basic Protobuf structure) that will be exchanged whenever it's a argument or a return value, along with the `services`, that describe the procedures available.
+We need to define the messages (basic Protobuf structure) that will be exchanged whenever it's an argument or a return value, along with the `services`, that describe the procedures available.
 
-> [!example] Example from tutorial
+> [!example] Example from official tutorial[^grpcio]
 >
 > First the messages:
 > ```protobuf
@@ -303,7 +303,7 @@ A few advantages of gRPC:
 3. It makes possible to work with native objects of your current programming language
 4. It generate the classes and object/messages for you from a `.proto` file
 
-From the dedicated file, it creates a gRPC server to receive requests from clients, that themselves use a dynamic library generated via `protoc` and a dedicated plugin.
+From the dedicated file, it creates a gRPC server to receive requests from clients that themselves use a dynamic library generated via `protoc` and a dedicated plugin.
 
 ![Architecture of gRPC](research/api/grpc-architecture.svg)
 
@@ -313,9 +313,9 @@ This diagram illustrate how different clients/servers written in different langu
 
 Although a few users would recommend to use a [[research/api/rest|REST]] API to handle uploads, other says that it depends on the size of images and your app[^reddit_grpc_files].
 
-Implementing file uploading in gRPC seems to be done via `stream`s[^betterprogramming][^vinsguru], one of [its features](https://grpc.io/docs/what-is-grpc/core-concepts/#client-streaming-rpc). The core principle is to send files in small chunk (by default, gRPC limits incoming messages to *4 MB* in case developer hasn't thought about messages size, but it can be increased[^sof_4mb]) Note that we send the metadata apart from the file, and it's not a standard so we have to define what's inside (path, name, extension/type...).
+Implementing file uploading in gRPC seems to be done via `stream`s[^betterprogramming][^vinsguru], one of [its features](https://grpc.io/docs/what-is-grpc/core-concepts/#client-streaming-rpc). The core principle is to send files in small chunk (by default, gRPC limits incoming messages to *4 MB* in case the developer hasn't thought about message size, but it can be increased[^sof_4mb]) Note that we send the metadata apart from the file, and it's not a standard so we have to define what's inside (path, name, extension/type...).
 
-Implementations seems to also use `oneof` keyword to avoid sending metadata each time we're sending a chunk of file.
+Implementations seem to also use `oneof` keyword to avoid sending metadata each time we're sending a chunk of file.
 ```protobuf
 message MetaData {
     string filename = 1;
@@ -332,7 +332,7 @@ message FileUploadRequest {
 
 ## Conclusion
 
-For an app heavily using file transfer, it seams GraphQL is out of the game as no standard exists.
+For an app heavily using file transfer, it seems GraphQL is out of the game as no standard exists.
 
 However methods exists in both REST and gRPC, which both have their advantage:
 - REST has a well-established mechanic with multipart requests (`multipart/form-data`)
@@ -350,7 +350,6 @@ However, REST/Protobuf is a possible combination (although not often used) and t
 [^betterprogramming]: Foong, N.W. (2022) _GRPC file upload and download in Python_, _Medium_. Better Programming. Available at: https://betterprogramming.pub/grpc-file-upload-and-download-in-python-910cc645bcf0 (Accessed: January 14, 2023).
 [^vinsguru]: vIns (2022) _GRPC file upload with client streaming_, _Vinsguru_. Available at: https://www.vinsguru.com/grpc-file-upload-client-streaming/ (Accessed: January 14, 2023).
 [^sof_4mb]: Anderson, E. (2019) _Should I transmit large data sets via grpc without manual chunking?_, _Stack Overflow_. Available at: https://stackoverflow.com/a/58435745 (Accessed: January 14, 2023).
-
 [^aimuliple]: Ataman, A. (2023) _Graphql vs. rest in 2023: Top 4 advantages & disadvantages_, _AIMultiple_. Available at: https://research.aimultiple.com/graphql-vs-rest/ (Accessed: January 13, 2023). 
 [^wundergraph]: Neuse, J. (2021) _GraphQL file uploads - evaluating the 5 most common approaches_, _WunderGraph_. Available at: https://wundergraph.com/blog/graphql_file_uploads_evaluating_the_5_most_common_approaches (Accessed: January 13, 2023).
 [^multipart]: libik and kirk (2020) _REST API - file (ie images) processing - best practices_, _Stack Overflow_. Available at: https://stackoverflow.com/questions/33279153/rest-api-file-ie-images-processing-best-practices (Accessed: January 13, 2023).
