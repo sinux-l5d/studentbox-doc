@@ -70,4 +70,4 @@ We can see that JSON as at least one drawback: the document's structure and the 
 >
 > Although protocols like REST and gRPC are more suitable for the task (with multipart upload and stream respectively), one could upload a file by encoding it in base64. Note that it increase the data size by ~33%[^33-percent]
 
-[^33-percent]: https://stackoverflow.com/questions/4083702/posting-a-file-and-associated-data-to-a-restful-webservice-preferably-as-json
+[^33-percent]: T, D. and B, S. (2019) _Posting a file and associated data to a restful webservice preferably as JSON_, _Stack Overflow_. Available at: https://stackoverflow.com/a/4083908 (Accessed: January 5, 2023).
