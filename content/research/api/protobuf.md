@@ -3,11 +3,11 @@ title: "Protocol Buffers"
 draft: false
 tags: []
 aliases:
-- Protobuf
-- Protocol Buffers
+  - Protobuf
+  - Protocol Buffers
 ---
 
-[Protobuf or Protocol Buffers](https://developers.google.com/protocol-buffers) is a binary serialisation format that needs type definition beforehand. It's created by Google. This allow to omit structure from the data serialised, as client and server know what it is about.
+[Protobuf or Protocol Buffers](https://developers.google.com/protocol-buffers) is a binary serialisation format that needs type definition beforehand. It's created by Google. This allows to omit structure from the data serialised, as client and server know what it is about.
 
 > [!quote]
 >
@@ -16,7 +16,7 @@ aliases:
 
 To demonstrate how it's working, I've recreated the same structure as in the [[research/api/json|JSON]] page.
 
-A *type* in protobuf is called a `message`. Messages are defined in a `.proto` file. Let's create a list of people, and see how it's serialised compared to JSON.
+A _type_ in protobuf is called a `message`. Messages are defined in a `.proto` file. Let's create a list of people, and see how it's serialised compared to JSON.
 
 ```protobuf
 syntax = "proto3";
@@ -36,12 +36,12 @@ message PersonList {
 }
 ```
 
-Before going further, each property has a identifier (the numbers). They are used in serialisation.
+Before going further, each property has an identifier (the numbers). They are used in serialisation.
 
 I made a little experiment in JavaScript using [protobufjs](https://www.npmjs.com/package/protobufjs) to compare the length of messages in JSON (string) and Protobuf (binary):
 
 ```js
-const protobuf = require("protobufjs");
+const protobuf = require("protobufjs")
 
 const simon = {
   id: "12345",
@@ -49,10 +49,8 @@ const simon = {
   surname: "Leonard",
   age: 21,
   hobbies: ["coding", "reading", "writing"],
-  allies: [
-    "54321",
-  ],
-};
+  allies: ["54321"],
+}
 
 const lucas = {
   id: "54321",
@@ -60,23 +58,21 @@ const lucas = {
   surname: "Thomas",
   age: 22,
   hobbies: [],
-  allies: [
-    "12345",
-  ],
-};
+  allies: ["12345"],
+}
 
-const root = protobuf.loadSync("file.proto");
+const root = protobuf.loadSync("file.proto")
 
-const Person = root.lookupType("file.Person");
+const Person = root.lookupType("file.Person")
 
-var simonBuf = Person.create(simon);
-var lucasBuf = Person.create(lucas);
+var simonBuf = Person.create(simon)
+var lucasBuf = Person.create(lucas)
 
-const PersonList = root.lookupType("file.PersonList");
-const users = PersonList.create({ users: [simonBuf, lucasBuf] });
-const dataUsers = PersonList.encode(users).finish();
+const PersonList = root.lookupType("file.PersonList")
+const users = PersonList.create({ users: [simonBuf, lucasBuf] })
+const dataUsers = PersonList.encode(users).finish()
 
-console.log("proto-serialized=" + dataUsers.length);
+console.log("proto-serialized=" + dataUsers.length)
 console.log("json-serialized=" + JSON.stringify(users).length)
 ```
 
@@ -84,9 +80,10 @@ The score for proto is 93 bytes, and 207 for JSON.
 
 > [!info] Info
 >
-> When a protobufjs object like Person or Personlist gets serialized as JSON, like the last line in the script above, then it use the javascript equivalent, so the result is not biased.
+> When a protobufjs object like Person or Personlist gets serialised as JSON, like the last line in the script above, then it uses the JavaScript equivalent, so the result is not biased.
 
 With a few more line, we can infer what the proto-serialised message look like:
+
 ```js
 console.log(dataUsers) // <Buffer 0a 3a 0a 05 31 32 33 34 35 12 05 53 69 6d 6f 6e 1a 07 4c 65 6f 6e 61 72 64 20 15 2a 06 63 6f 64 69 6e 67 2a 07 72 65 61 64 69 6e 67 2a 07 77 72 69 74 ... 43 more bytes>
 console.log(dataUser.toString())

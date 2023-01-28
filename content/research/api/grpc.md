@@ -3,37 +3,39 @@ title: "gRPC"
 draft: false
 tags: []
 aliases:
-- grpc
-- gRPC
+  - grpc
+  - gRPC
 ---
 
 gRPC is "a high performance, open source universal RPC framework"[^grpcio].
-RPC stands for *Remote Procedure Call*, which is a kind of API that abstract the complexity of making calls to a remote API by providing to the developer functions that works like if it was local[^wikipedia].
+RPC stands for _Remote Procedure Call_, which is a kind of API that abstracts the complexity of making calls to a remote API by providing to the developer functions that works like if it was local[^wikipedia].
 
 > [!quote] Quote
-> 
+>
 > gRPC uses HTTP/2 under the covers, but HTTP is not exposed to the API designer[^googlecloud]
 
 gRPC uses [[research/api/protobuf|Protocol Buffers]] as a serialisation format by default, but can use [[research/api/json|JSON]]. It works by extending the syntax of a `.proto` file.
 
-We need to define the messages (basic Protobuf structure) that will be exchanged whenever it's a argument or a return value, along with the `services`, that describe the procedures available.
+We need to define the messages (basic Protobuf structure) that will be exchanged whenever it's an argument or a return value, along with the `services`, that describe the procedures available.
 
 > [!example] Example from official tutorial[^grpcio]
 >
 > First the messages:
+>
 > ```protobuf
 > // The request message containing the user's name.
 > message HelloRequest {
 >   string name = 1;
 > }
-> 
+>
 > // The response message containing the greetings
 > message HelloReply {
 >   string message = 1;
 > }
 > ```
 >
-> and then the gRPC syntax to declare a *service, a set of procedures*:
+> and then the gRPC syntax to declare a _service, a set of procedures_:
+>
 > ```protobuf
 > // The greeter service definition.
 > service Greeter {
@@ -43,24 +45,26 @@ We need to define the messages (basic Protobuf structure) that will be exchanged
 > ```
 
 A few advantages of gRPC:
+
 1. It abstracts away the calls to a remote API
 2. Compatible with several popular languages
 3. It makes possible to work with native objects of your current programming language
 4. It generate the classes and object/messages for you from a `.proto` file
 
-From the dedicated file, it creates a gRPC server to receive requests from clients, that themselves use a dynamic library generated via `protoc` and a dedicated plugin.
+From the dedicated file, it creates a gRPC server to receive requests from clients that themselves use a dynamic library generated via `protoc` and a dedicated plugin.
 
 ![Architecture of gRPC](research/api/grpc-architecture.svg)
 
-This diagram illustrate how different clients/servers written in different languages can work together with the gRPC server and *stubs* (a client) created.
+This diagram illustrate how different clients/servers written in different languages can work together with the gRPC server and _stubs_ (a client) created.
 
 ## File upload
 
 Although a few users would recommend to use a [[research/api/rest|REST]] API to handle uploads, other says that it depends on the size of images and your app[^reddit_grpc_files].
 
-Implementing file uploading in gRPC seems to be done via `stream`s[^betterprogramming][^vinsguru], one of [its features](https://grpc.io/docs/what-is-grpc/core-concepts/#client-streaming-rpc). The core principle is to send files in small chunk (by default, gRPC limits incoming messages to *4 MB* in case developer hasn't thought about messages size, but it can be increased[^sof_4mb]) Note that we send the metadata apart from the file, and it's not a standard so we have to define what's inside (path, name, extension/type...).
+Implementing file uploading in gRPC seems to be done via `stream`s[^betterprogramming][^vinsguru], one of [its features](https://grpc.io/docs/what-is-grpc/core-concepts/#client-streaming-rpc). The core principle is to send files in small chunk (by default, gRPC limits incoming messages to *4 MB* in case the developer hasn't thought about message size, but it can be increased[^sof_4mb]) Note that we send the metadata apart from the file, and it's not a standard so we have to define what's inside (path, name, extension/type...).
 
-Implementations seems to also use `oneof` keyword to avoid sending metadata each time we're sending a chunk of file.
+Implementations seem to also use `oneof` keyword to avoid sending metadata each time we're sending a chunk of file.
+
 ```protobuf
 message MetaData {
 	string filename = 1;
