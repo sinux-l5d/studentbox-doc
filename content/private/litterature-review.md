@@ -1,8 +1,7 @@
-# Research Methods CA2
+# Project litterature review 
 
 Student Name: Simon LEONARD
 Student ID: D00262073
-Project Title: APIs for file transfer, a study case of REST, GraphQL and gRPC.
 
 ```toc
 ```
@@ -11,7 +10,9 @@ Project Title: APIs for file transfer, a study case of REST, GraphQL and gRPC.
 
 The research done in this paper helped me understand 3 types of APIs and how to achieve file transfer.
 
-This paper has been written with [Obsidian](https://obsidian.md) and is meant to be published as a website, available at https://sinux-l5d.github.io/studentbox-doc.
+> [!important] About this paper
+>
+> This paper has been written with [Obsidian](https://obsidian.md) and is meant to be published as a website, available at https://sinux-l5d.github.io/studentbox-doc.
 
 ## Literature review
 
