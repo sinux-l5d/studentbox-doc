@@ -31,7 +31,10 @@ While having the following constraints:
 - Hostable on AWS
 - Self-hostable on an on-premise server
 
+# 🏁 Where to start
+
 You can access the [[project/goals|goals]] page to know more about the project's goals and the [[project/road-map|road map]].
+There is also the [[tags/journal|journal entries]].
 
 [^bsc]:
     **B**achelor of **Sc**ience (**Hon**our**s**) is the 4th year after secondary school (in Ireland).
