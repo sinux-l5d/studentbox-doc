@@ -52,6 +52,8 @@ One other technique is risk control, which entails taking steps to lessen or com
 
 Transferring the risk to another party is a viable strategy, but it should be in a way that is acceptable to all parties involved. For example, a product company may choose to transfer the consequences of product defects to an outside vendor responsible for providing the product materials by requiring the vendor to cover the costs associated with the product defects.
 
+It is crucial to give concrete examples of how these strategies can be used in order to further improve understanding of risk mitigation in research. For instance, researchers can take a number of steps to guarantee the dependability of sources, like independently verifying the accuracy of data, using multiple sources to cross-check information, and performing quality control checks for errors and inconsistencies. Researchers can employ strategies like obtaining informed consent, anonymising data, and ensuring secure storage and transmission of sensitive information to reduce risks related to participant confidentiality. Researchers can also take precautions to lessen the risk of biases by conducting blind studies, using diverse and representative samples, and being open about any potential conflicts of interest.
+
 # References
 
 Treasury Board of Canada (2015) What is ethics?, Canada.ca. Gouvernement of Canada. Available at: https://www.canada.ca/en/treasury-board-secretariat/services/values-ethics/code/what-is-ethics.html (Accessed: March 21, 2023). 
