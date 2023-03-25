@@ -54,6 +54,30 @@ Transferring the risk to another party is a viable strategy, but it should be in
 
 It is crucial to give concrete examples of how these strategies can be used in order to further improve understanding of risk mitigation in research. For instance, researchers can take a number of steps to guarantee the dependability of sources, like independently verifying the accuracy of data, using multiple sources to cross-check information, and performing quality control checks for errors and inconsistencies. Researchers can employ strategies like obtaining informed consent, anonymising data, and ensuring secure storage and transmission of sensitive information to reduce risks related to participant confidentiality. Researchers can also take precautions to lessen the risk of biases by conducting blind studies, using diverse and representative samples, and being open about any potential conflicts of interest.
 
+# Project description & objectives
+
+Studentbox is a project that aims to make deployment easy for student, and management of hosted projects simple for a teacher.
+
+The goal is to provide a _sandboxed_ environment in which a student's website (in PHP for now) would live separated from other projects or the host machine. It aims at being simple to deploy (using containerise  system), to use and administrate. 
+
+# Research objectives
+
+The research I'm conducting is about efficient file transfer (REST vs GraphQL vs gRPC APIs) and containerised environment to isolate processes (docker vs podman).
+
+It is expected that with this research, I have a critical point of view on which system I use and why.
+
+# Ensure ethical principles
+
+The first research I've performed is about APIs type. I did this by reading articles from users of those technologies and official websites, comparing them with opposing viewpoints, and, in a few cases, conducting my own tests (JSON vs Protobuf for serialisation for example).
+
+I'm regularly writing journal entries when I work on the research or on the project associated. The project and the journal is hosted on GitHub, allowing anyone to review and see my work. This together ensure transparency.
+
+My researches don't involve human subject, reducing the amount of ethical principles to keep in mind (privacy, confidentiality, non-maleficence etc.). Note that those principles are taken into account in the project itself, no password will be stored in plain text for example.
+
+# Conclusion
+
+Doing research ethically is essential to ensuring that all parties involved, including researchers and participants, have their rights, safety, and well-being respected. In order to ensure openness and accountability, it is crucial to approach research activities with a critical and reflective perspective. Regularly monitoring and documenting the research process is also necessary. In the case of the Studentbox project, ethical principles were taken into account by staying away from using human subjects, ensuring transparency through consistent journal entries and free access to project materials, and putting safety precautions in place to protect users' privacy and confidentiality. This method allows us to undertake research that is not just ethical and socially responsible, but also scientifically valid.
+
 # References
 
 Treasury Board of Canada (2015) What is ethics?, Canada.ca. Gouvernement of Canada. Available at: https://www.canada.ca/en/treasury-board-secretariat/services/values-ethics/code/what-is-ethics.html (Accessed: March 21, 2023). 
