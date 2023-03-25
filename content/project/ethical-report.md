@@ -37,6 +37,11 @@ It is important for researchers to be mindful of the vulnerabilities of their st
 
 Moreover, ambiguity regarding vulnerability may also present challenges for researchers in obtaining ethical approval for their studies, as ethics boards may have differing interpretations of what constitutes vulnerability and how it should be addressed. Therefore, policymakers and researchers must be mindful of the potential risks associated with ambiguity and inconsistency regarding vulnerability in research ethics. There is a need for policymakers to revisit and clarify guidance on vulnerability, potentially through a process of stakeholder engagement. This would enable researchers to more effectively identify and mitigate risks, while also ensuring that their studies are conducted ethically and with due consideration for the vulnerabilities of their participants.
 
+In addition to considering the vulnerabilities of study participants, researchers must also be mindful of their own potential biases and the integrity of their sources.
+Bias can impact the design, implementation, and interpretation of study findings and can come from a variety of different places, including personal beliefs or financial interests.
+Researchers must take precautions to reduce and make clear any potential biases, including openly disclosing any conflicts of interest and using varied, representative samples. Similar to this, the reliability and validity of sources, such as data and information, must be carefully assessed.
+This can involve ensuring that participants and other stakeholders are informed of all pertinent information and that data sources are accurate and comprehensive. Researchers can improve their research's ethical integrity and advance the veracity of their findings by taking these factors into account.
+
 # Mitigation to Minimise Risk
 
 Mitigating risks is essential in any research project, and there are several strategies that can be implemented to minimise risks. One strategy is to assume and accept risk, which involves identifying and understanding the risks that could affect the project's output. The team members collaborate to assess the possible consequences and vulnerabilities of the risks, which helps bring the risks to the organisation's attention, and all team members are aware of them.
