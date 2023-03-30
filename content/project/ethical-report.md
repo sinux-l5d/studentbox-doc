@@ -42,6 +42,8 @@ Bias can impact the design, implementation, and interpretation of study findings
 Researchers must take precautions to reduce and make clear any potential biases, including openly disclosing any conflicts of interest and using varied, representative samples. Similar to this, the reliability and validity of sources, such as data and information, must be carefully assessed.
 This can involve ensuring that participants and other stakeholders are informed of all pertinent information and that data sources are accurate and comprehensive. Researchers can improve their research's ethical integrity and advance the veracity of their findings by taking these factors into account.
 
+Among the vulnerabilities, one should also take into account the researcher’s own biases. If the researcher has his own preferences on the topic, he must say it explicitly in his paper. Sources is also a touchy part, as one may overuse a source, or the source is not reliable or biased.
+
 # Mitigation to Minimise Risk
 
 Mitigating risks is essential in any research project, and there are several strategies that can be implemented to minimise risks. One strategy is to assume and accept risk, which involves identifying and understanding the risks that could affect the project's output. The team members collaborate to assess the possible consequences and vulnerabilities of the risks, which helps bring the risks to the organisation's attention, and all team members are aware of them.
@@ -62,9 +64,9 @@ The goal is to provide a _sandboxed_ environment in which a student's website (i
 
 # Research objectives
 
-The research I'm conducting is about efficient file transfer (REST vs GraphQL vs gRPC APIs) and containerised environment to isolate processes (docker vs podman).
+The research I'm conducting is about efficient file transfer (REST vs GraphQL vs gRPC APIs) and containerised environment to isolate processes (Docker vs Podman). Because the project involves code bases, it will more than likely include more than one file, so we need efficient file transfer. Along with that, we don't want every project hosted to interfere with one another, nor should it should impact the host machine more than expected.
 
-It is expected that with this research, I have a critical point of view on which system I use and why.
+Others research include storage (plain file, git repository, SQL or No-SQL database), permissions for students and teacher, limit ressources allocated to each project and deployment in the cloud (on-premise servers or AWS).
 
 # Ensure ethical principles
 
@@ -73,6 +75,8 @@ The first research I've performed is about APIs type. I did this by reading arti
 I'm regularly writing journal entries when I work on the research or on the project associated. The project and the journal is hosted on GitHub, allowing anyone to review and see my work. This together ensure transparency.
 
 My researches don't involve human subject, reducing the amount of ethical principles to keep in mind (privacy, confidentiality, non-maleficence etc.). Note that those principles are taken into account in the project itself, no password will be stored in plain text for example.
+
+However, I might have biased on the technologies I want to use. Indeed I want to learn RPCs API which will favour gRPC in my researches, and I've been trying the Go programming language for a while and want to have a real project with it. That said, the project have a few good reasons to use those technologies, for example the main library I use is written in Go, or gRPC including streams by default which I can use in a real-time log display.
 
 # Conclusion
 
