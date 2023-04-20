@@ -4,6 +4,7 @@ enableToc: false
 ---
 
 _Studentbox_ is a project that aims to make deployment easy for student 👨‍🎓, and management of hosted projects simple for a teacher 👨‍🏫.
+The repository is hosted on [Github](https://github.com/sinux-l5d/studentbox).
 
 # 🌍 Context
 
