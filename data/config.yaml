@@ -6,19 +6,21 @@ enableLatex: true
 enableCodeBlockTitle: true
 enableCodeBlockCopy: true
 enableCallouts: true
-enableSPA: true
+enableSPA: false
 enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: false
 enableGitHubEdit: true
+enableMermaid: false
 GitHubLink: https://github.com/sinux-l5d/studentbox-doc/tree/main/content
-enableSemanticSearch: false
-operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
+search:
+  enableSemanticSearch: false
+  operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
+  operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
 description:
   This is the documentation for my 4th year project in Dundalk Institute of Technologies (Dkit) in Ireland,
   part of my curriculum in Université Savoie Mont-Blanc (USMB) thanks to the Erasmus+ programme.
-page_title:
-  "👨‍💻 Studentbox documentation"
+page_title: "👨‍💻 Studentbox documentation"
 links:
   - link_name: Github
     link: https://github.com/sinux-l5d
