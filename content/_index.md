@@ -37,6 +37,10 @@ While having the following constraints:
 You can access the [[project/goals|goals]] page to know more about the project's goals and the [[project/road-map|road map]].
 There is also the [[tags/journal|journal entries]].
 
+# 📄 Poster
+
+During the project, I had to make a poster to present it. You can find it <a href="poster.pdf">here</a>.
+
 [^bsc]:
     **B**achelor of **Sc**ience (**Hon**our**s**) is the 4th year after secondary school (in Ireland).
     In France, the equivalent year is the 1st year of Master's degree (the 4th year after _Lycée_).
