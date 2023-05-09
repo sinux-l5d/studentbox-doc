@@ -5,7 +5,7 @@ tags: []
 aliases: []
 ---
 
-# Introduction
+## Introduction
 
 Studentbox is a CLI tool that aims at automating the creation of sandboxed environments (isolated from each other, and from host). The default environment (called runtime) is the traditional LAMP stack most students go through to learn PHP and SQL.
 The project is using Podman 4, which has to be installed with a running user socket.
@@ -22,7 +22,7 @@ We'll cover the following questions:
 
 To answer these questions, we have chosen to use a qualitative approach. This is because we believe that a qualitative approach will allow us to gain a good understanding of the technical process of spawning and testing the LAMP runtime. We do not expect to collect any relevant data beyond this understanding.
 
-# Research Objective and Methodology
+## Research Objective and Methodology
 
 This research aims to evaluate the LAMP runtime on Studentbox and compare its functionalities to a manual LAMP stack installation, utilising a concise qualitative research methodology.
 
@@ -32,11 +32,11 @@ Data collection will involve various methods, including observation, documentati
 
 A case study research design will be used to explore the LAMP runtime on Studentbox in detail, uncovering factors contributing to its success or failure. Ultimately, our qualitative methodology and case study approach will provide in-depth insights into this critical aspect of the Studentbox platform.
 
-# Data collection
+## Data collection
 
 We'll answer each question using Studentbox `0.2.0`.
 
-## Is spawning a LAMP runtime simple?
+### Is spawning a LAMP runtime simple?
 
 Spawning a LAMP stack with the studentbox cli, meaning a pod of containers, is done as follows:
 
@@ -52,7 +52,7 @@ To create a runtime instance, called a project, the CLI requires a username, a p
 
 The spawning is simple, but as the time of writing the output is not so relevant, giving a bunch of IDs of containers started.
 
-## Can we check that the containers are up and running?
+### Can we check that the containers are up and running?
 
 There are two ways to check the health of Studentbox's containers.
 
@@ -78,7 +78,7 @@ Status of project simon/hello-world:
 
 So yes, we can check the containers are up and running.
 
-## Does it create the necessary folders?
+### Does it create the necessary folders?
 
 By default, the CLI uses the data directory in the current directory to store all data. Let's check it:
 
@@ -132,7 +132,7 @@ $ podman unshare tree -d
 
 Although the permissions seem to limit the native interactions with the file-system (for the database), yes the files and folders are created.
 
-## Does it give the credentials for the database, and the port to access the web server?
+### Does it give the credentials for the database, and the port to access the web server?
 
 At the time of writing, Studentbox `v0.2.0` doesn't offer a convenient way to retrieve the random passwords or the port used to access the runtime.
 
@@ -161,7 +161,7 @@ Here, the password to give to a student would be `uJBlWQNf1D`.
 
 So no, Studentbox fails at providing necessary information, for now.
 
-## Does a piece of PHP code work as expected?  Is the DB connection working?
+### Does a piece of PHP code work as expected?  Is the DB connection working?
 
 Here we'll try the following php code:
 ```php
@@ -258,7 +258,7 @@ id: 1 - Name: John Doe
 
 So yes, we can execute PHP code and work with the database.
 
-# Preliminary Data Analysis
+## Preliminary Data Analysis
 
 The analysis of the collected data from Studentbox 0.2.0 can be summarised as follows:
 
@@ -270,7 +270,7 @@ The analysis of the collected data from Studentbox 0.2.0 can be summarised as fo
 
 In conclusion, Studentbox 0.2.0 successfully deploys the LAMP runtime, allowing the execution of PHP code and interaction with the database. However, there are areas for improvement, such as the output relevancy, access to credentials and port information, and native file system interaction.
 
-# Reflection and Limitations
+## Reflection and Limitations
 
 As we think about our study, we become aware of a number of constraints that might have affected the outcomes and the applicability of our findings.
 
@@ -284,7 +284,7 @@ As we think about our study, we become aware of a number of constraints that mig
 
 In summary, these constraints should be taken into account when interpreting our results, even though our study has given useful insights into the LAMP runtime on Studentbox. By including a wider variety of participants, running experiments on other platforms, and getting feedback from people with varied levels of experience and competence, future study could solve these constraints. This would improve our comprehension of the use of Studentbox's LAMP runtime and provide information for future system upgrades.
 
-# Conclusion
+## Conclusion
 
 In this study, we investigated the functionality of the LAMP runtime on Studentbox. Through our qualitative research methodology, we were able to gain valuable insights into the system's strengths and weaknesses. Despite the limitations of our study, the findings offer an understanding of the LAMP runtime on Studentbox and its potential for use in an educational environment.
 
