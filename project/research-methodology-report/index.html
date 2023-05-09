@@ -1,0 +1,276 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Introduction Studentbox is a CLI tool that aims at automating the creation of sandboxed environments (isolated from each other, and from host)."><meta property="og:title" content="Research Methodology Report"><meta property="og:description" content="Introduction Studentbox is a CLI tool that aims at automating the creation of sandboxed environments (isolated from each other, and from host)."><meta property="og:type" content="website"><meta property="og:image" content="https://sinux-l5d.github.io/studentbox-docicon.png"><meta property="og:url" content="https://sinux-l5d.github.io/studentbox-doc/project/research-methodology-report/"><meta property="og:width" content="200"><meta property="og:height" content="200"><meta name=twitter:card content="summary"><meta name=twitter:title content="Research Methodology Report"><meta name=twitter:description content="Introduction Studentbox is a CLI tool that aims at automating the creation of sandboxed environments (isolated from each other, and from host)."><meta name=twitter:image content="https://sinux-l5d.github.io/studentbox-docicon.png"><title>Research Methodology Report</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://sinux-l5d.github.io/studentbox-doc/icon.png><link href=https://sinux-l5d.github.io/studentbox-doc/styles.f59ce067f652868ebdcf07fb2d1c3080.min.css rel=stylesheet><link href=https://sinux-l5d.github.io/studentbox-doc/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://sinux-l5d.github.io/studentbox-doc/js/darkmode.48585c81639b84eb81ef456350166ee5.min.js></script>
+<script src=https://sinux-l5d.github.io/studentbox-doc/js/util.00639692264b21bc3ee219733d38a8be.min.js></script>
+<link rel=preload href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css as=style onload='this.onload=null,this.rel="stylesheet"' integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@floating-ui/core@1.2.1></script>
+<script src=https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.2.1></script>
+<script defer src=https://sinux-l5d.github.io/studentbox-doc/js/popover.aa9bc99c7c38d3ae9538f218f1416adb.min.js></script>
+<script defer src=https://sinux-l5d.github.io/studentbox-doc/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js></script>
+<script defer src=https://sinux-l5d.github.io/studentbox-doc/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js></script>
+<script defer src=https://sinux-l5d.github.io/studentbox-doc/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const SEARCH_ENABLED=!1,LATEX_ENABLED=!0,PRODUCTION=!0,BASE_URL="https://sinux-l5d.github.io/studentbox-doc",fetchData=Promise.all([fetch("https://sinux-l5d.github.io/studentbox-doc/indices/linkIndex.1d6d05b43ff89ec2b27eb2c5aee171df.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://sinux-l5d.github.io/studentbox-doc/indices/contentIndex.d2a4cdc444c6810a7c19bdf38fca4800.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addCollapsibleCallouts(),initPopover("https://sinux-l5d.github.io/studentbox-doc",!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://sinux-l5d.github.io/studentbox-doc",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}function i(n){const e=n.target,t=e.className.split(" "),s=t.includes("broken"),o=t.includes("internal-link");plausible("Link Click",{props:{href:e.href,broken:s,internal:o,graph:!1}})}const a=document.querySelectorAll("a");for(link of a)link.className.includes("root-title")&&link.addEventListener("click",i,{once:!0})},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script>window.Million={navigate:e=>window.location.href=e,prefetch:()=>{}},window.addEventListener("DOMContentLoaded",()=>{init(),render()})</script><script defer data-domain=sinux-l5d.github.io/studentbox-doc src=https://plausible.io/js/script.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://sinux-l5d.github.io/studentbox-doc/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js></script><div class=singlePage><header><h1 id=page-title><a class=root-title href=https://sinux-l5d.github.io/studentbox-doc>👨‍💻 Studentbox documentation</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>Research Methodology Report</h1><p class=meta>Last updated
+May 9, 2023
+<a href=https://github.com/sinux-l5d/studentbox-doc/tree/main/content/project/research-methodology-report.md rel=noopener>Edit Source</a></p><ul class=tags></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#is-spawning-a-lamp-runtime-simple>Is spawning a LAMP runtime simple?</a></li><li><a href=#can-we-check-that-the-containers-are-up-and-running>Can we check that the containers are up and running?</a></li><li><a href=#does-it-create-the-necessary-folders>Does it create the necessary folders?</a></li><li><a href=#does-it-give-the-credentials-for-the-database-and-the-port-to-access-the-web-server>Does it give the credentials for the database, and the port to access the web server?</a></li><li><a href=#does-a-piece-of-php-code-work-as-expected--is-the-db-connection-working>Does a piece of PHP code work as expected? Is the DB connection working?</a></li></ol></nav></details></aside><a href=#introduction><h1 id=introduction><span class=hanchor arialabel=Anchor># </span>Introduction</h1></a><p>Studentbox is a CLI tool that aims at automating the creation of sandboxed environments (isolated from each other, and from host). The default environment (called runtime) is the traditional LAMP stack most students go through to learn PHP and SQL.
+The project is using Podman 4, which has to be installed with a running user socket.</p><p>In this paper, we will test this runtime to determine whether it is working as it would work with a manual install of a LAMP stack.</p><p>We&rsquo;ll cover the following questions:</p><ul><li>Is spawning a runtime simple?</li><li>Can we check that the containers are up and running?</li><li>Does it create the necessary folders?</li><li>Does it give the credentials for the database, and the port to access the web server?</li><li>Does a piece of PHP code work as expected?</li><li>Is the DB connection working?</li></ul><p>To answer these questions, we have chosen to use a qualitative approach. This is because we believe that a qualitative approach will allow us to gain a good understanding of the technical process of spawning and testing the LAMP runtime. We do not expect to collect any relevant data beyond this understanding.</p><a href=#research-objective-and-methodology><h1 id=research-objective-and-methodology><span class=hanchor arialabel=Anchor># </span>Research Objective and Methodology</h1></a><p>This research aims to evaluate the LAMP runtime on Studentbox and compare its functionalities to a manual LAMP stack installation, utilising a concise qualitative research methodology.</p><p>Qualitative research is well-suited for examining technical processes, as it enables in-depth data collection and analysis of one&rsquo;s own experiences, observations, and reflections. By employing this approach, a thorough understanding of the LAMP runtime within Studentbox can be achieved.</p><p>Data collection will involve various methods, including observation, documentation (log, error messages etc.) and testing. We will assess the simplicity of spawning a runtime, check the status of containers, verify folder creation, verify if information is provided, test PHP code execution, and examine database connections. These techniques will yield valuable data on the LAMP runtime&rsquo;s functionality, strengths, and weaknesses.</p><p>A case study research design will be used to explore the LAMP runtime on Studentbox in detail, uncovering factors contributing to its success or failure. Ultimately, our qualitative methodology and case study approach will provide in-depth insights into this critical aspect of the Studentbox platform.</p><a href=#data-collection><h1 id=data-collection><span class=hanchor arialabel=Anchor># </span>Data collection</h1></a><p>We&rsquo;ll answer each question using Studentbox <code>0.2.0</code>.</p><a href=#is-spawning-a-lamp-runtime-simple><h2 id=is-spawning-a-lamp-runtime-simple><span class=hanchor arialabel=Anchor># </span>Is spawning a LAMP runtime simple?</h2></a><p>Spawning a LAMP stack with the studentbox cli, meaning a pod of containers, is done as follows:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ ./studentbox spawn --user simon --project hello-world --runtime lamp
+</span></span><span class=line><span class=cl>[containers] 2023/05/09 16:01:22 INFO: Created pod a5c511d24ba44f20c4111fdd58066c78d046ea00f6bb136ec4ff1471034c5175
+</span></span><span class=line><span class=cl>[containers] 2023/05/09 16:01:22 INFO: Created container 90acb2d5b4b859bbc2a15fe4ec9573f5b3daa5d76d6d2feef6e280c03d8b0d94 in pod a5c511d24ba44f20c4111fdd58066c78d046ea00f6bb136ec4ff1471034c5175
+</span></span><span class=line><span class=cl>[containers] 2023/05/09 16:01:22 INFO: Created container 48fa3b1765b3a77a89bef60fac2917fead010e3184aa4d2988747aa5bb30dd24 in pod a5c511d24ba44f20c4111fdd58066c78d046ea00f6bb136ec4ff1471034c5175
+</span></span><span class=line><span class=cl>[containers] 2023/05/09 16:01:22 INFO: Created container aae609d91557fc5a6551b64432663c1b0af20a8ffb7b409362b44c1c4f43d399 in pod a5c511d24ba44f20c4111fdd58066c78d046ea00f6bb136ec4ff1471034c5175
+</span></span></code></pre></td></tr></table></div></div><p>To create a runtime instance, called a project, the CLI requires a username, a project name, and a runtime name.</p><p>The spawning is simple, but as the time of writing the output is not so relevant, giving a bunch of IDs of containers started.</p><a href=#can-we-check-that-the-containers-are-up-and-running><h2 id=can-we-check-that-the-containers-are-up-and-running><span class=hanchor arialabel=Anchor># </span>Can we check that the containers are up and running?</h2></a><p>There are two ways to check the health of Studentbox&rsquo;s containers.</p><p>First one is global to all containers, and check for containers currently running:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ ./studentbox list
+</span></span><span class=line><span class=cl>Containers:
+</span></span><span class=line><span class=cl>- a5c511d24ba4-infra (simon/hello-world)
+</span></span><span class=line><span class=cl>- sb-simon-hello-world-mysql (simon/hello-world)
+</span></span><span class=line><span class=cl>- sb-simon-hello-world-php (simon/hello-world)
+</span></span><span class=line><span class=cl>- sb-simon-hello-world-apache (simon/hello-world)
+</span></span></code></pre></td></tr></table></div></div><p>Second is project-scoped:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ ./studentbox status --user simon --project hello-world
+</span></span><span class=line><span class=cl>Status of project simon/hello-world:
+</span></span><span class=line><span class=cl>- a5c511d24ba4-infra: running
+</span></span><span class=line><span class=cl>- sb-simon-hello-world-mysql: running
+</span></span><span class=line><span class=cl>- sb-simon-hello-world-php: running
+</span></span><span class=line><span class=cl>- sb-simon-hello-world-apache: running
+</span></span></code></pre></td></tr></table></div></div><p>So yes, we can check the containers are up and running.</p><a href=#does-it-create-the-necessary-folders><h2 id=does-it-create-the-necessary-folders><span class=hanchor arialabel=Anchor># </span>Does it create the necessary folders?</h2></a><p>By default, the CLI uses the data directory in the current directory to store all data. Let&rsquo;s check it:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ tree -d
+</span></span><span class=line><span class=cl>.
+</span></span><span class=line><span class=cl>└── data
+</span></span><span class=line><span class=cl>    └── simon
+</span></span><span class=line><span class=cl>        └── hello-world
+</span></span><span class=line><span class=cl>            ├── db
+</span></span><span class=line><span class=cl>            │   ├── app  [error opening dir]
+</span></span><span class=line><span class=cl>            │   ├── mysql  [error opening dir]
+</span></span><span class=line><span class=cl>            │   ├── performance_schema  [error opening dir]
+</span></span><span class=line><span class=cl>            │   └── sys  [error opening dir]
+</span></span><span class=line><span class=cl>            └── html
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>10 directories
+</span></span></code></pre></td></tr></table></div></div><p>We note that there are errors trying to read the <code>db</code> directory, which is a mount point for the MariaDB container.</p><p>After checking the permissions of the folder:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ ls -l data/simon/hello-world/db
+</span></span><span class=line><span class=cl>total 139392
+</span></span><span class=line><span class=cl>drwx------ 2 10998 10998      4096 May  9 16:01 app
+</span></span></code></pre></td></tr></table></div></div><p>It seems that the group and id does belong to my user&rsquo;s subrange:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ cat /etc/subuid
+</span></span><span class=line><span class=cl>sinux:10000:65536
+</span></span></code></pre></td></tr></table></div></div><p>It&rsquo;s a limitation that can we worked-around with a <code>podman</code> utility command:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ podman unshare tree -d
+</span></span><span class=line><span class=cl>.
+</span></span><span class=line><span class=cl>└── data
+</span></span><span class=line><span class=cl>    └── simon
+</span></span><span class=line><span class=cl>        └── hello-world
+</span></span><span class=line><span class=cl>            ├── db
+</span></span><span class=line><span class=cl>            │   ├── app
+</span></span><span class=line><span class=cl>            │   ├── mysql
+</span></span><span class=line><span class=cl>            │   ├── performance_schema
+</span></span><span class=line><span class=cl>            │   └── sys
+</span></span><span class=line><span class=cl>            └── html
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>10 directories
+</span></span></code></pre></td></tr></table></div></div><p>Although the permissions seem to limit the native interactions with the file-system (for the database), yes the files and folders are created.</p><a href=#does-it-give-the-credentials-for-the-database-and-the-port-to-access-the-web-server><h2 id=does-it-give-the-credentials-for-the-database-and-the-port-to-access-the-web-server><span class=hanchor arialabel=Anchor># </span>Does it give the credentials for the database, and the port to access the web server?</h2></a><p>At the time of writing, Studentbox <code>v0.2.0</code> doesn&rsquo;t offer a convenient way to retrieve the random passwords or the port used to access the runtime.</p><p>We can however do it with Podman itself, which should be installed anyway to use studentbox.</p><p>To get the port:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ podman ps --filter label=&#34;studentbox.container=true&#34; --format &#34;{{ .Names}}: {{ .Ports }}&#34;
+</span></span><span class=line><span class=cl>a5c511d24ba4-infra: 0.0.0.0:42765-&gt;80/tcp
+</span></span><span class=line><span class=cl>sb-simon-hello-world-mysql: 0.0.0.0:42765-&gt;80/tcp
+</span></span><span class=line><span class=cl>sb-simon-hello-world-php: 0.0.0.0:42765-&gt;80/tcp
+</span></span><span class=line><span class=cl>sb-simon-hello-world-apache: 0.0.0.0:42765-&gt;80/tcp
+</span></span></code></pre></td></tr></table></div></div><p>Here we see that my pod is exposing the port 42765.</p><p>To get the passwords for MariaDB:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ podman inspect sb-simon-hello-world-mysql --format &#39;{{- range $e := .Config.Env }}{{ $e }}{{&#34;\n&#34;}}{{- end}}&#39; | grep MARIADB
+</span></span><span class=line><span class=cl>MARIADB_DATABASE=app
+</span></span><span class=line><span class=cl>MARIADB_VERSION=1:10.9.5+maria~ubu2204
+</span></span><span class=line><span class=cl>MARIADB_PASSWORD=uJBlWQNf1D
+</span></span><span class=line><span class=cl>MARIADB_ROOT_PASSWORD=DH7zfSJyBuMTZxx7RWGdWMdCn73ZDm
+</span></span><span class=line><span class=cl>MARIADB_USER=student
+</span></span></code></pre></td></tr></table></div></div><p>Here, the password to give to a student would be <code>uJBlWQNf1D</code>.</p><p>So no, Studentbox fails at providing necessary information, for now.</p><a href=#does-a-piece-of-php-code-work-as-expected--is-the-db-connection-working><h2 id=does-a-piece-of-php-code-work-as-expected--is-the-db-connection-working><span class=hanchor arialabel=Anchor># </span>Does a piece of PHP code work as expected? Is the DB connection working?</h2></a><p>Here we&rsquo;ll try the following php code:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Testing date
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=k>echo</span> <span class=s2>&#34;Today is &#34;</span> <span class=o>.</span> <span class=nx>date</span><span class=p>(</span><span class=s2>&#34;d-m-Y H:i:s&#34;</span><span class=p>)</span> <span class=o>.</span> <span class=s2>&#34;&lt;br/&gt;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Testing database connexion
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=nv>$c</span> <span class=o>=</span> <span class=nx>mysqli_connect</span><span class=p>(</span><span class=s2>&#34;127.0.0.1:3306&#34;</span><span class=p>,</span> <span class=s2>&#34;student&#34;</span><span class=p>,</span> <span class=s2>&#34;uJBlWQNf1D&#34;</span><span class=p>,</span> <span class=s2>&#34;app&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nv>$c</span> <span class=o>-&gt;</span> <span class=na>connect_errno</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>echo</span> <span class=s2>&#34;Failed to connect to MySQL: &#34;</span> <span class=o>.</span> <span class=nv>$c</span> <span class=o>-&gt;</span> <span class=na>connect_error</span> <span class=o>.</span> <span class=s2>&#34;&lt;br/&gt;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>exit</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>echo</span> <span class=s2>&#34;Connected to MySQL &lt;br/&gt;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>$query</span> <span class=o>=</span> <span class=nv>$c</span><span class=o>-&gt;</span><span class=na>query</span><span class=p>(</span><span class=s2>&#34;SHOW DATABASES&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>echo</span> <span class=s2>&#34;Databases: &#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>foreach</span> <span class=p>(</span> <span class=nv>$query</span><span class=o>-&gt;</span><span class=na>fetch_all</span><span class=p>()</span> <span class=k>as</span> <span class=nv>$row</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>echo</span> <span class=nv>$row</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>.</span> <span class=s2>&#34; &#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Getting php info
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>phpinfo</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><p>That we put in the <code>./data/simon/hello-world/html/index.php</code> file.</p><p>It results in the following:</p><p><a class="internal-link broken">lamp_result.png</a></p><p>Here we learn several things:</p><ol><li>Date is working, displayed with the UTC time by default</li><li>We can access MySQL/MariaDB, and 2 databases exists, the <code>app</code> one being the default one for students</li><li>Finally, we get all php informations, including the version (8.2.3 is latest at the time of writing) and the details for each php module (not in the image)</li></ol><p>Furthermore, we can try to write in the database with the following:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>$conn</span> <span class=o>=</span> <span class=nx>mysqli_connect</span><span class=p>(</span><span class=s2>&#34;127.0.0.1:3306&#34;</span><span class=p>,</span> <span class=s2>&#34;student&#34;</span><span class=p>,</span> <span class=s2>&#34;uJBlWQNf1D&#34;</span><span class=p>,</span> <span class=s2>&#34;app&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nv>$conn</span> <span class=o>-&gt;</span> <span class=na>connect_errno</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>die</span><span class=p>(</span><span class=s2>&#34;Failed to connect to MySQL: &#34;</span> <span class=o>.</span> <span class=nv>$c</span> <span class=o>-&gt;</span> <span class=na>connect_error</span> <span class=o>.</span> <span class=s2>&#34;&lt;br/&gt;&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Create a new table called &#34;users&#34; with two columns: &#34;id&#34; and &#34;name&#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nv>$sql</span> <span class=o>=</span> <span class=s2>&#34;CREATE TABLE IF NOT EXISTS users (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30) NOT NULL)&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nv>$conn</span><span class=o>-&gt;</span><span class=na>query</span><span class=p>(</span><span class=nv>$sql</span><span class=p>)</span> <span class=o>===</span> <span class=k>TRUE</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>echo</span> <span class=s2>&#34;Table &#39;users&#39; created successfully&lt;br&gt;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>echo</span> <span class=s2>&#34;Error creating table: &#34;</span> <span class=o>.</span> <span class=nv>$conn</span><span class=o>-&gt;</span><span class=na>error</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Insert a new row into the &#34;users&#34; table
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nv>$sql</span> <span class=o>=</span> <span class=s2>&#34;INSERT INTO users (name) VALUES (&#39;John Doe&#39;)&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nv>$conn</span><span class=o>-&gt;</span><span class=na>query</span><span class=p>(</span><span class=nv>$sql</span><span class=p>)</span> <span class=o>===</span> <span class=k>TRUE</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>echo</span> <span class=s2>&#34;New record created successfully&lt;br&gt;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>echo</span> <span class=s2>&#34;Error: &#34;</span> <span class=o>.</span> <span class=nv>$sql</span> <span class=o>.</span> <span class=s2>&#34;&lt;br&gt;&#34;</span> <span class=o>.</span> <span class=nv>$conn</span><span class=o>-&gt;</span><span class=na>error</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Select all rows from the &#34;users&#34; table and display them
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nv>$sql</span> <span class=o>=</span> <span class=s2>&#34;SELECT * FROM users&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nv>$result</span> <span class=o>=</span> <span class=nv>$conn</span><span class=o>-&gt;</span><span class=na>query</span><span class=p>(</span><span class=nv>$sql</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nv>$result</span><span class=o>-&gt;</span><span class=na>num_rows</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=nv>$row</span> <span class=o>=</span> <span class=nv>$result</span><span class=o>-&gt;</span><span class=na>fetch_assoc</span><span class=p>())</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>echo</span> <span class=s2>&#34;id: &#34;</span> <span class=o>.</span> <span class=nv>$row</span><span class=p>[</span><span class=s2>&#34;id&#34;</span><span class=p>]</span> <span class=o>.</span> <span class=s2>&#34; - Name: &#34;</span> <span class=o>.</span> <span class=nv>$row</span><span class=p>[</span><span class=s2>&#34;name&#34;</span><span class=p>]</span> <span class=o>.</span> <span class=s2>&#34;&lt;br&gt;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>echo</span> <span class=s2>&#34;0 results&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Close the MySQL connection
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nv>$conn</span><span class=o>-&gt;</span><span class=na>close</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><p>That works:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ curl http://localhost:42765 -s | sed -e &#39;s/&lt;br&gt;/\n/g&#39;
+</span></span><span class=line><span class=cl>Table &#39;users&#39; created successfully
+</span></span><span class=line><span class=cl>New record created successfully
+</span></span><span class=line><span class=cl>id: 1 - Name: John Doe
+</span></span></code></pre></td></tr></table></div></div><p>So yes, we can execute PHP code and work with the database.</p><a href=#preliminary-data-analysis><h1 id=preliminary-data-analysis><span class=hanchor arialabel=Anchor># </span>Preliminary Data Analysis</h1></a><p>The analysis of the collected data from Studentbox 0.2.0 can be summarised as follows:</p><ol><li>Spawning a LAMP runtime is simple but generates less relevant output, consisting mainly of container IDs.</li><li>The CLI allows checking the status of containers globally and project-wise, confirming they are up and running.</li><li>The necessary folders are created, but native interactions with the database&rsquo;s folder are limited due to permission issues. However, using <code>podman unshare</code>, as
+<a href=https://docs.podman.io/en/latest/markdown/podman-unshare.1.html rel=noopener>stated in its documentation</a> seems to avoid the issue for now.</li><li>Studentbox does not provide database credentials and web server port access directly at the time of writing. However, these can be retrieved using the installed <code>podman</code> CLI tool.</li><li>PHP code execution and database connections work as expected, with the tested code successfully interacting with the MySQL/MariaDB database.</li></ol><p>In conclusion, Studentbox 0.2.0 successfully deploys the LAMP runtime, allowing the execution of PHP code and interaction with the database. However, there are areas for improvement, such as the output relevancy, access to credentials and port information, and native file system interaction.</p><a href=#reflection-and-limitations><h1 id=reflection-and-limitations><span class=hanchor arialabel=Anchor># </span>Reflection and Limitations</h1></a><p>As we think about our study, we become aware of a number of constraints that might have affected the outcomes and the applicability of our findings.</p><ol><li><p>Time restrictions: Because the investigation was done in a short amount of time, it&rsquo;s possible that we were unable to thoroughly examine every part of the Studentbox LAMP runtime or run more tests to confirm our findings.</p></li><li><p>Limited resources: we only tested Studentbox on Arch Linux; we did not test it on any other platforms or operating systems. The applicability of our findings to different environments may have been impacted by this restriction.</p></li><li><p>Limited comments from inexperienced users: In our study, we excluded inexperienced users and anyone unfamiliar with the LAMP stack or Studentbox. Their opinions might have offered insightful information about the usability and efficiency of the LAMP runtime on Studentbox from the viewpoint of a novice user.</p></li><li><p>Lack of external input: We did not speak with a technician or a teacher who could have provided opinions on the installation procedure or suggested modifications to the Studentbox LAMP runtime. Their viewpoint might have added to our comprehension of the system&rsquo;s advantages and disadvantages.</p></li></ol><p>In summary, these constraints should be taken into account when interpreting our results, even though our study has given useful insights into the LAMP runtime on Studentbox. By including a wider variety of participants, running experiments on other platforms, and getting feedback from people with varied levels of experience and competence, future study could solve these constraints. This would improve our comprehension of the use of Studentbox&rsquo;s LAMP runtime and provide information for future system upgrades.</p><a href=#conclusion><h1 id=conclusion><span class=hanchor arialabel=Anchor># </span>Conclusion</h1></a><p>In this study, we investigated the functionality of the LAMP runtime on Studentbox. Through our qualitative research methodology, we were able to gain valuable insights into the system&rsquo;s strengths and weaknesses. Despite the limitations of our study, the findings offer an understanding of the LAMP runtime on Studentbox and its potential for use in an educational environment.</p><p>Future research should address the limitations we encountered by involving a diverse range of participants, testing on various platforms, and seeking feedback from users with different levels of experience.
+This will help to build a more comprehensive understanding of the LAMP runtime on Studentbox and contribute to the ongoing development and improvement of the software for the benefit of students and teachers alike.</p></article><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No backlinks found</li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://sinux-l5d.github.io/studentbox-doc/js/graph.6579af7b10c818dbd2ca038702db0224.js></script></div></div><div id=contact_buttons><footer><p>Made by Simon LEONARD using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2023</p><ul><li><a href=https://sinux-l5d.github.io/studentbox-doc>Home</a></li><li><a href=https://github.com/sinux-l5d>Github</a></li><li><a href=https://www.linkedin.com/in/simon-l5d/>Linkedin</a></li></ul></footer></div></div></body></html>
